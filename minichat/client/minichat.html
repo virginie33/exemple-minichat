@@ -1,0 +1,31 @@
+<head>
+      <title>minichat</title>
+    </head>
+
+    <body>
+      <h1>Exemple Mini Chat</h1>
+      
+      {{> hello}}
+    </body>
+   
+	
+    <template name="hello">
+      <form id="formulaire">
+            <label>Pseudo</label><input type="text" id="pseudo" name="pseudo"><br>
+            <label>Message</label><textarea name="message" id="message "></textarea>
+            <input type="submit" value="DIRE">
+       </form>
+       
+        <div>
+        {{#each derniersMessages}} 
+            <p>
+                
+                <label>{{pseudo}}</label>
+                <em>{{time}}</em><br>
+                {{message}}
+            </p>
+        {{/each}} 
+
+        </div>
+
+    </template>
